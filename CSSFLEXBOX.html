@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background: #032753;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background:#245899;
+      color: white;
+      padding: 16px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0 32px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 0;
+    }
+    .main-columns {
+      display: flex;
+      flex-direction: column;
+      flex: 2 1 400px;
+      gap: 0;
+    }
+    aside {
+      flex: 1 1 200px;
+      background: #31508b;
+      padding: 20px;
+      color: white;
+    }
+
+    section {
+      flex: 1 1 250px;
+      background: #90beff;
+      padding: 20px;
+      color: white;
+    }
+
+    article {
+      flex: 1 1 250px;
+      background: #4571d6;
+      padding: 20px;
+      color: white;
+    }
+
+    footer {
+      margin-top: auto;
+    }
+
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+    }
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+      <header>
+      <h1>(●'◡'●)</h1>
+    </header>
+    <nav>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <span style="color: white; font-weight: bold; font-size: 1.3em; letter-spacing: 1px; margin-left: 24px;">Bau Bau's</span>
+        <ul style="display: flex; gap: 20px; list-style: none; justify-content: flex-end; margin: 0; padding: 0 32px;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="main-columns">
+        <section>
+          <h2>Section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non laoreet dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti.</p>
+        </section>
+        <article>
+          <h2>Article</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa.</p>
+        </article>
+      </div>
+      <aside>
+        <h2>Aside</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur.</p>
+      </aside>
+    </main>
+    <footer>
+      <p>FOOTER</p>
+    </footer>
+  </div>
+</body>
+</html>
